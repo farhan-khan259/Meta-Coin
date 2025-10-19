@@ -1,0 +1,210 @@
+/* ===========================
+   Meta Coin Admin Panel Theme
+   =========================== */
+
+:root {
+    --primary-1: #107887;
+    --primary-2: #2383e4;
+    --hover: #0f5fa8;
+    --light-bg: #eaf4ff;
+    --dark-text: #0e1e52;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.25);
+    --border: #e0e0e0;
+    --muted: #8b8b8b;
+}
+
+/* --- Base Layout --- */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: var(--light-bg);
+    color: var(--dark-text);
+}
+
+.admin-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: var(--light-bg);
+}
+
+.admin-content {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    background: var(--light-bg);
+}
+
+.admin-layout {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+/* --- Dashboard Cards --- */
+.dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.dashboard-card {
+    background: linear-gradient(135deg, var(--primary-1), var(--primary-2));
+    color: var(--white);
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px var(--shadow);
+    flex: 1 1 220px;
+    max-width: 280px;
+    transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px var(--shadow);
+}
+
+.dashboard-card h4 {
+    margin: 0 0 6px 0;
+    font-size: 15px;
+    opacity: 0.95;
+    font-weight: 500;
+}
+
+.dashboard-card p {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* --- Sections --- */
+.recent-section,
+.charts-section {
+    padding: 26px;
+    background: var(--white);
+    border-radius: 14px;
+    margin: 14px;
+    box-shadow: 0 6px 16px var(--shadow);
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease;
+}
+
+.recent-section:hover,
+.charts-section:hover {
+    transform: translateY(-3px);
+}
+
+/* --- Table Styles --- */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--dark-text);
+}
+
+.dashboard-table th,
+.dashboard-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+}
+
+.dashboard-table th {
+    background: var(--light-bg);
+    font-weight: 600;
+    color: var(--primary-1);
+}
+
+.dashboard-table tr:hover {
+    background: rgba(35, 131, 228, 0.05);
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-1), var(--primary-2));
+    border: none;
+    color: var(--white);
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px var(--shadow);
+}
+
+/* --- Cards in Tables or Info Boxes --- */
+.info-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 10px var(--shadow);
+    color: var(--dark-text);
+}
+
+/* --- Responsive Breakpoints --- */
+@media (max-width: 992px) {
+    .admin-layout {
+        flex-direction: column;
+    }
+
+    .dashboard-cards {
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .recent-section,
+    .charts-section {
+        padding: 20px;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-cards {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .recent-section,
+    .charts-section {
+        padding: 16px;
+        margin: 10px 0;
+    }
+
+    .dashboard-table th,
+    .dashboard-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-cards {
+        padding: 10px;
+        gap: 12px;
+    }
+
+    .recent-section,
+    .charts-section {
+        padding: 12px;
+    }
+
+    .dashboard-table th,
+    .dashboard-table td {
+        font-size: 13px;
+        padding: 8px;
+    }
+}

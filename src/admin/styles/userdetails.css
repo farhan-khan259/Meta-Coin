@@ -1,0 +1,133 @@
+/* ===========================
+   Meta Coin User Details
+   =========================== */
+
+:root {
+    --primary-1: #107887;
+    --primary-2: #2383e4;
+    --gradient: linear-gradient(135deg, var(--primary-1), var(--primary-2));
+    --text-dark: #0f172a;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Container */
+.userdetails-container {
+    padding: 25px;
+    background: #f4f6fc;
+    min-height: 100vh;
+}
+
+.userdetails-container h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: left;
+    position: relative;
+}
+
+.userdetails-container h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--gradient);
+    border-radius: 2px;
+    margin-top: 6px;
+}
+
+/* User Info Card */
+.user-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    border-left: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.user-card:hover {
+    border-left: 5px solid var(--primary-2);
+    transform: translateY(-3px);
+}
+
+.user-card p {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #334155;
+}
+
+.user-card p strong {
+    color: var(--primary-2);
+}
+
+/* Actions Section */
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    background: var(--gradient);
+    box-shadow: 0 3px 8px rgba(35, 131, 228, 0.3);
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(35, 131, 228, 0.4);
+}
+
+/* Alternate Button Colors */
+.btn.green {
+    background: linear-gradient(45deg, #16a34a, #22c55e);
+}
+
+.btn.orange {
+    background: linear-gradient(45deg, #f59e0b, #f97316);
+}
+
+.btn.red {
+    background: linear-gradient(45deg, #ef4444, #dc2626);
+}
+
+.btn.blue {
+    background: linear-gradient(45deg, #3b82f6, #2563eb);
+}
+
+.btn.yellow {
+    background: linear-gradient(45deg, #eab308, #ca8a04);
+}
+
+.btn.purple {
+    background: linear-gradient(45deg, #9333ea, #7e22ce);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .userdetails-container {
+        padding: 15px;
+    }
+
+    .user-card {
+        padding: 18px;
+    }
+
+    .btn {
+        flex: 1 1 45%;
+        text-align: center;
+    }
+}

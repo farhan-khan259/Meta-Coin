@@ -1,0 +1,463 @@
+/* DepositHistory.css */
+
+:root {
+    --primary-1: #107887;
+    --primary-2: #2383e4;
+    --hover: #0f5fa8;
+    --light-bg: #eaf4ff;
+    --dark-text: #0e1e52;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.25);
+    --card-bg: #ffffff;
+    --border: #e0e0e0;
+    --muted: #8b8b8b;
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--light-bg);
+    margin: 0;
+    color: var(--dark-text)
+}
+
+.deposithistory-wrapper {
+    display: flex;
+    min-height: 100vh;
+    position: relative
+}
+
+.deposithistory-sidebar {
+    width: 300px;
+    background: var(--card-bg);
+    color: var(--dark-text);
+    position: fixed;
+    left: -320px;
+    top: 0;
+    bottom: 0;
+    z-index: 60;
+    padding: 22px;
+    transition: left .28s ease;
+    box-shadow: 4px 0 18px var(--shadow);
+    border-right: 1px solid var(--border);
+}
+
+.deposithistory-sidebar.open {
+    left: 0
+}
+
+.deposithistory-sidebar-top {
+    display: flex;
+    flex-direction: column;
+    gap: 18px
+}
+
+.deposithistory-close-btn {
+    border: none;
+    background: transparent;
+    color: var(--dark-text);
+    font-size: 20px;
+    align-self: flex-end;
+    cursor: pointer
+}
+
+.deposithistory-sidebar-brand {
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+.deposithistory-brand-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--primary-1), var(--primary-2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--white);
+    font-size: 20px;
+    box-shadow: 0 4px 8px var(--shadow)
+}
+
+.deposithistory-brand-title {
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+.deposithistory-brand-sub {
+    font-size: 13px;
+    opacity: .85;
+    color: var(--muted);
+}
+
+.deposithistory-sidebar-nav {
+    margin-top: 10px
+}
+
+.deposithistory-sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.deposithistory-sidebar-nav li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .18s;
+    color: var(--dark-text);
+}
+
+.deposithistory-sidebar-nav li:hover {
+    background: rgba(35, 131, 228, 0.1);
+}
+
+.deposithistory-sidebar-nav li.active {
+    background: rgba(35, 131, 228, 0.15);
+    color: var(--primary-2);
+}
+
+.deposithistory-sidebar-nav li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.deposithistory-main {
+    flex: 1;
+    margin-left: 0;
+    width: 100%
+}
+
+.deposithistory-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 30
+}
+
+.deposithistory-left {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.deposithistory-hamburger {
+    border: none;
+    background: linear-gradient(135deg, var(--primary-1), var(--primary-2));
+    color: var(--white);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer
+}
+
+.deposithistory-app-title {
+    font-weight: 600;
+    color: var(--dark-text)
+}
+
+.deposithistory-right {
+    display: flex;
+    gap: 10px;
+    align-items: center
+}
+
+.deposithistory-whatsapp-btn {
+    background: linear-gradient(135deg, var(--primary-1), var(--primary-2));
+    color: var(--white);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.deposithistory-whatsapp-btn:hover {
+    background: var(--hover);
+}
+
+.deposithistory-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--primary-1);
+    border: 2px solid var(--border);
+}
+
+.deposithistory-content {
+    padding: 18px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.deposithistory-container {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.deposithistory-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin-bottom: 30px;
+}
+
+.deposithistory-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.deposithistory-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.deposithistory-field {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    min-height: 50px;
+}
+
+.deposithistory-label {
+    font-weight: 600;
+    color: var(--dark-text);
+    font-size: 14px;
+    min-width: 120px;
+}
+
+.deposithistory-value {
+    color: var(--dark-text);
+    font-size: 14px;
+    text-align: right;
+    flex: 1;
+    font-weight: 500;
+}
+
+.deposithistory-amount {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--primary-1);
+}
+
+.deposithistory-status-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    flex: 1;
+}
+
+.deposithistory-status-badge {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.deposithistory-status-completed {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--success);
+    border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.deposithistory-status-pending {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: var(--warning);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.deposithistory-status-rejected {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--danger);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+.deposithistory-time-ago {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.deposithistory-field-divider {
+    height: 1px;
+    background-color: var(--border);
+    width: 100%;
+}
+
+.deposithistory-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-1), transparent);
+    margin-top: 15px;
+    border: none;
+}
+
+.deposithistory-bottom-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--white);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    z-index: 40;
+}
+
+.deposithistory-bn-btn {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    font-size: 20px;
+    color: var(--muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.deposithistory-bn-btn:hover,
+.deposithistory-bn-btn.active {
+    color: var(--primary-1);
+}
+
+.deposithistory-center {
+    transform: translateY(-18px);
+    background: linear-gradient(135deg, var(--primary-1), var(--primary-2));
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    box-shadow: 0 6px 18px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.deposithistory-center:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 8px 20px var(--shadow);
+}
+
+.deposithistory-center-dot {
+    font-weight: 700;
+    font-size: 20px
+}
+
+@media(max-width:760px) {
+
+
+    .deposithistory-sidebar {
+        width: 260px
+    }
+
+    .deposithistory-content {
+        padding: 14px;
+        padding-bottom: 100px;
+    }
+
+    .deposithistory-container {
+        padding: 15px;
+    }
+
+    .deposithistory-whatsapp-btn span {
+        display: none;
+    }
+
+    .deposithistory-whatsapp-btn {
+        padding: 8px;
+    }
+
+    .deposithistory-bottom-nav {
+        padding: 10px 15px;
+    }
+
+    .deposithistory-bn-btn {
+        font-size: 18px;
+    }
+
+    .deposithistory-field {
+        flex-direction: column;
+        gap: 8px;
+        padding: 15px 0;
+    }
+
+    .deposithistory-label {
+        min-width: auto;
+    }
+
+    .deposithistory-value {
+        text-align: left;
+        width: 100%;
+    }
+
+    .deposithistory-status-info {
+        align-items: flex-start;
+        width: 100%;
+    }
+}
+
+@media(max-width:426px) {
+
+
+    .deposithistory-content {
+        padding: 12px;
+        padding-bottom: 100px;
+    }
+
+    .deposithistory-container {
+        padding: 12px;
+    }
+
+    .deposithistory-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .deposithistory-field {
+        padding: 12px 0;
+    }
+}
